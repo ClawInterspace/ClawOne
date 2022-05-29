@@ -10,4 +10,16 @@ module.exports = defineConfig({
     host: 'localhost',
     port: 8200,
   },
+
+  configureWebpack: {
+    devtool: process.env.NODE_ENV !== 'development' ? '' : 'source-map',
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: './public/index.html',
+        filename: 'index.html',
+        title: 'claw-one',
+        inject: true,
+      }),
+    ],
+  },
 })
