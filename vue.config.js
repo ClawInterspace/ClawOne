@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = defineConfig({
   lintOnSave: process.env.NODE_ENV !== 'development',
-  transpileDependencies: true,
   devServer: {
     https: true,
     host: 'localhost',
@@ -23,4 +22,16 @@ module.exports = defineConfig({
       }),
     ],
   },
+
+  pluginOptions: {
+    quasar: {
+      importStrategy: 'kebab',
+      rtlSupport: false
+    }
+  },
+
+  transpileDependencies: [
+    'quasar'
+  ],
+
 })
