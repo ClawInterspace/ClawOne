@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = defineConfig({
   lintOnSave: process.env.NODE_ENV !== 'development',
-  transpileDependencies: true,
   devServer: {
     https: true,
     host: 'localhost',
@@ -19,7 +18,20 @@ module.exports = defineConfig({
         filename: 'index.html',
         title: 'claw-one',
         inject: true,
+        minify: process.env.NODE_ENV == 'development' ? false : true,
       }),
     ],
   },
+
+  pluginOptions: {
+    quasar: {
+      importStrategy: 'kebab',
+      rtlSupport: false
+    }
+  },
+
+  transpileDependencies: [
+    'quasar'
+  ],
+
 })
