@@ -23,5 +23,5 @@ export default {
     Notify,
   },
   iconSet: fasFlag,
-  lang: lang
+  lang: lang,
 }

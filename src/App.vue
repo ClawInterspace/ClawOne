@@ -3,6 +3,9 @@
     <router-view />
   </div>
 </template>
+<style src='quasar/dist/quasar.css'></style>
+<style src='quasar/dist/quasar.addon.css'></style>
+<style src='@quasar/extras/material-icons/material-icons.css'></style>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

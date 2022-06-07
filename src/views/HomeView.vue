@@ -4,7 +4,6 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { Notify } from 'quasar'
 
 export default defineComponent({
   name: 'HomeView',
@@ -13,9 +12,9 @@ export default defineComponent({
 
   mounted() {
     const vm: any = this
-    Notify.create({
-      type: 'positive',
-      color: 'positive',
+    vm.$q.notify({
+      type: '$positive',
+      color: '$positive',
       message: 'quasar imported',
       timeout: 5000,
       position: 'top',

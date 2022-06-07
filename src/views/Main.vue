@@ -39,7 +39,7 @@
     </q-drawer>
 
     <q-page-container>
-      <router-view />
+      <router-view :key="$route.fullPath"/>
     </q-page-container>
   </q-layout>
 </template>
@@ -47,6 +47,7 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 import EssentialLink from './EssentialLink.vue';
+import {Notify} from 'quasar'
 
 const linksList = [
   {
@@ -74,6 +75,6 @@ export default defineComponent({
         leftDrawerOpen.value = !leftDrawerOpen.value
       }
     }
-  }
+  },
 });
 </script>
