@@ -3,6 +3,7 @@ import '@/assets/styles/quasar.sass'
 import '@quasar/extras/roboto-font/roboto-font.css'
 import '@quasar/extras/material-icons/material-icons.css'
 import '@quasar/extras/fontawesome-v5/fontawesome-v5.css'
+import { fasFlag } from '@quasar/extras/fontawesome-v6'
 import {Cookies, Loading, Notify, QSpinnerPuff} from 'quasar'
 
 export default {
@@ -21,5 +22,6 @@ export default {
     Loading,
     Notify,
   },
+  iconSet: fasFlag,
   lang: lang
 }
