@@ -47,7 +47,6 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 import EssentialLink from './EssentialLink.vue';
-import {Notify} from 'quasar'
 
 const linksList = [
   {
