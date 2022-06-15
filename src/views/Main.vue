@@ -19,15 +19,12 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer
-        v-model="leftDrawerOpen"
-        show-if-above
-        bordered
+    <q-drawer v-model="leftDrawerOpen"
+              show-if-above
+              bordered
     >
       <q-list>
-        <q-item-label
-            header
-        >
+        <q-item-label header>
           Menu List
         </q-item-label>
 
@@ -45,13 +42,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
-import EssentialLink from './EssentialLink.vue';
+import { defineComponent, ref } from 'vue'
+import EssentialLink from './EssentialLink.vue'
 
 const linksList = [
   {
     title: 'Task Arrangement',
-    caption: 'arrange my tasks',
     icon: 'list-check',
     link: 'https://www.google.com/calendar/render?hl=zh-TW&tab=wc'
   }
