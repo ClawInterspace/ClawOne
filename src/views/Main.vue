@@ -19,21 +19,7 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen"
-              show-if-above
-              bordered
-    >
-      <q-list>
-        <q-item-label header>
-          Menu List
-        </q-item-label>
-
-        <EssentialLink v-for="link in essentialLinks"
-                       :key="link.title"
-                       v-bind="link"
-        />
-      </q-list>
-    </q-drawer>
+    <Menu :leftDrawerOpen="leftDrawerOpen"/>
 
     <q-page-container>
       <router-view :key="$route.fullPath"/>
@@ -42,29 +28,19 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
-import EssentialLink from './EssentialLink.vue'
-
-const linksList = [
-  {
-    title: 'Task Arrangement',
-    icon: 'list-check',
-    link: 'https://www.google.com/calendar/render?hl=zh-TW&tab=wc'
-  }
-];
+import {defineAsyncComponent, defineComponent, ref} from 'vue'
 
 export default defineComponent({
   name: 'MainLayout',
 
   components: {
-    EssentialLink
+    Menu: defineAsyncComponent(() => import('@/views/Menu/Menu.vue')),
   },
 
   setup () {
     const leftDrawerOpen = ref(true)
 
     return {
-      essentialLinks: linksList,
       leftDrawerOpen,
       toggleLeftDrawer () {
         leftDrawerOpen.value = !leftDrawerOpen.value
