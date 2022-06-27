@@ -5,8 +5,13 @@ import store from './store'
 import { Quasar } from 'quasar'
 import quasarUserOptions from './plugins/quasar-user-options'
 
-createApp(App)
-  .use(Quasar, quasarUserOptions)
-  .use(store)
-  .use(router)
-  .mount('#app')
+let app
+(async () => {
+
+  app = createApp(App)
+  app.use(Quasar, quasarUserOptions)
+     .use(store)
+     .use(router)
+  app.mount('#app')
+
+})()
