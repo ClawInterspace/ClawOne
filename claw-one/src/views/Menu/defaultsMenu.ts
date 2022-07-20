@@ -14,29 +14,29 @@ const HOME_MENU: MenuNode = new MenuNode({
 export const MENUS: MenuNode[] = [
   {
     id: 100,
-    name: 'time_management',
+    name: 'time-management',
     meta: new MenuNodeMeta({ icon: 'o_event_available', title: '時間管理' }),
     children: [
       {
         id: 110,
-        name: 'to_do_list',
+        name: 'to-do-list',
         meta: { icon: '', title: '待辦事項' },
       },
       {
         id: 120,
-        name: 'long_term_plan',
+        name: 'long-term-plan',
         meta: { icon: '', title: '長期計畫' },
       },
     ] as MenuNode[],
   },
   {
     id: 200,
-    name: 'information_center',
+    name: 'information-center',
     meta: new MenuNodeMeta({ icon: 'o_assignment', title: '資訊中心' }),
     children: [
       {
         id: 210,
-        name: 'seminar_info',
+        name: 'seminar-info',
         meta: { icon: '', title: '研討會資訊' },
       },
     ] as MenuNode[],

@@ -9,6 +9,11 @@ const routes: RouteRecordRaw[] = [
         path: '',
         component: () => import('src/views/pages/Home/HomePage.vue')
       },
+      {
+        path: 'time-management/to-do-list',
+        name: 'to-do-list',
+        component: () => import('src/views/pages/time_management/ToDoList/ToDoList.vue')
+      }
     ],
   },
 

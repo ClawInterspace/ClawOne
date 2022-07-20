@@ -8,7 +8,7 @@
                           :icon="menu.meta.icon"
                           :label="menu.meta.title">
           <q-item v-for="(submenu, index) in menu.children" :key="index"
-                  clickable v-ripple :to="submenu.name" active-class="active-link">
+                  clickable v-ripple :to="{name: submenu.name}" active-class="active-link">
             <q-item-section avatar>
               <q-icon :name="submenu.meta.icon" />
             </q-item-section>
