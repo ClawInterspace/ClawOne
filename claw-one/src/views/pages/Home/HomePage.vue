@@ -1,5 +1,12 @@
 <template>
-  Home
+  <div>
+    Home
+    <div>
+      <q-checkbox>
+        DevTools failed to load source map: Could not load content for chrome-extension://gnldpbnocfnlkkicnaplmkaphfdnlplb/ContentScript/CaptureBrowserEvent.js.map: System error: net::ERR_BLOCKED_BY_CLIENT
+      </q-checkbox>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
