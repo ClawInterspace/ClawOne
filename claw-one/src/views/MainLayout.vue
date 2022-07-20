@@ -12,7 +12,7 @@
         />
 
         <q-toolbar-title>
-          Money Secretary
+          Claw Interspace
         </q-toolbar-title>
 
         <div>User Account</div>
