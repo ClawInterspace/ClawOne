@@ -2,16 +2,17 @@
   <div>
     Home
     <div>
-      <q-checkbox>
-        DevTools failed to load source map: Could not load content for chrome-extension://gnldpbnocfnlkkicnaplmkaphfdnlplb/ContentScript/CaptureBrowserEvent.js.map: System error: net::ERR_BLOCKED_BY_CLIENT
+      <q-checkbox v-for="(note, index) in devNote" :key="index" v-model="note.isChecked">
+        {{ note.title }}
       </q-checkbox>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import {defineComponent, onMounted} from 'vue'
+import {defineComponent, onMounted, ref} from 'vue'
 import {useQuasar} from 'quasar'
+import {DevNote} from 'src/views/pages/Home/DevNote/DevNote'
 
 export default defineComponent({
   name: 'HomePage',
@@ -30,7 +31,9 @@ export default defineComponent({
       })
     }
 
-    return {}
+    return {
+      devNote: ref(DevNote),
+    }
   },
 })
 </script>
