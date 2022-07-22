@@ -1,11 +1,14 @@
 <template>
-  <router-view />
+  SeminarInfo
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'App'
+  name: 'SeminarInfo',
 })
 </script>
+
+<style lang="scss" scoped>
+</style>

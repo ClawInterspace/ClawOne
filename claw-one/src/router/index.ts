@@ -1,11 +1,11 @@
-import { route } from 'quasar/wrappers';
+import { route } from 'quasar/wrappers'
 import {
   createMemoryHistory,
   createRouter,
   createWebHashHistory,
   createWebHistory,
-} from 'vue-router';
-import routes from './routes';
+} from 'vue-router'
+import routes from './routes'
 
 /*
  * If not building with SSR mode, you can
@@ -19,7 +19,7 @@ import routes from './routes';
 export default route(function (/* { store, ssrContext } */) {
   const createHistory = process.env.SERVER
     ? createMemoryHistory
-    : (process.env.VUE_ROUTER_MODE === 'history' ? createWebHistory : createWebHashHistory);
+    : (process.env.VUE_ROUTER_MODE === 'history' ? createWebHistory : createWebHashHistory)
 
   const Router = createRouter({
     scrollBehavior: () => ({ left: 0, top: 0 }),
@@ -31,7 +31,7 @@ export default route(function (/* { store, ssrContext } */) {
     history: createHistory(
       process.env.MODE === 'ssr' ? void 0 : process.env.VUE_ROUTER_BASE
     ),
-  });
+  })
 
-  return Router;
-});
+  return Router
+})

@@ -48,11 +48,11 @@ module.exports = {
     // https://eslint.vuejs.org/user-guide/#why-doesn-t-it-work-on-vue-files
     // required to lint *.vue files
     'vue'
-    
+
     // https://github.com/typescript-eslint/typescript-eslint/issues/389#issuecomment-509292674
     // Prettier has not been included as plugin to avoid performance impact
     // add it as an extension for your IDE
-    
+
   ],
 
   globals: {
@@ -70,10 +70,17 @@ module.exports = {
 
   // add your custom rules here
   rules: {
-    
+
+    'vue/multi-word-component-names': 0,
+
     'prefer-promise-reject-errors': 'off',
 
-    quotes: ['warn', 'single', { avoidEscape: true }],
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
+
+    // allow debugger during development only
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+
+    indent: ['error', 2],
 
     // this rule, if on, would require explicit return type on the `render` function
     '@typescript-eslint/explicit-function-return-type': 'off',
@@ -85,7 +92,12 @@ module.exports = {
     // does not work with type definitions
     'no-unused-vars': 'off',
 
-    // allow debugger during development only
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    'linebreak-style': ['error', 'unix'],
+    quotes: ['error', 'single', { avoidEscape: true }],
+    semi: ['error', 'never'],
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-inferrable-types': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
   }
 }
